@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 <!-- 每条独立一行追加到本段末尾，无需分类标题，合并时冲突最小 -->
 
 - [修复] 修复 Web 首页个股栏在 stock-bar 摘要字段缺失或动作建议无法归类时隐藏情绪分与建议标识的问题。
+- [新功能] 新增 `value_margin_of_safety`、`turtle_trend`、`trading_discipline` 三个从经典投资书单提炼的差异化策略 skill（价值与安全边际、海龟顺势与资金控管、交易纪律与行为护栏），默认不进入默认激活与路由 fallback 集，需显式启用。
+- [文档] 新增 `docs/reading-list-strategies.md`，记录投资书单到买卖基准与逻辑的映射，面向后续台股潜力「猎股」清单。
 
 ## [3.24.1] - 2026-06-28
 
