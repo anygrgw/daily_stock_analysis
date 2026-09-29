@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 <!-- 每条独立一行追加到本段末尾，无需分类标题，合并时冲突最小 -->
 
 - [修复] 修复 Web 首页个股栏在 stock-bar 摘要字段缺失或动作建议无法归类时隐藏情绪分与建议标识的问题。
+- [改进] 放宽 `ANTHROPIC_MAX_TOKENS` 配置项的可设置上限（256-8192 -> 256-65536），避免直连 Anthropic 兼容路径下人为限制现代模型的输出空间；具体上限数值待后续按官方文档核实调整。
+- [改进] 精简 `bot/dispatcher.py` 意图识别 prompt 与 `src/agent/executor.py` 交易 Agent 工作流程指令中的过时约束写法（移除冗余强调语与过度的分阶段串行限制，仅涉及 `LEGACY_DEFAULT_AGENT_SYSTEM_PROMPT`），不改变对外接口与报告结构。
 
 ## [3.24.1] - 2026-06-28
 
