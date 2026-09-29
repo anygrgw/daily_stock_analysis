@@ -381,7 +381,7 @@ class CommandDispatcher:
 You are a stock analysis assistant router.  Given a user's natural-language
 message, determine whether it contains a stock-analysis request.
 
-Return a JSON object (and NOTHING else) with these fields:
+Return a JSON object with these fields:
 - "intent": one of "analysis", "chat", "none"
   * "analysis" → the user wants stock analysis / diagnosis / comparison
   * "chat" → the user is asking a general question related to finance
@@ -403,15 +403,6 @@ User: "今天大盘怎么样"
 
 User: "明天天气如何"
 {"intent":"none","codes":[],"strategy":null}
-
-User: "600519"
-{"intent":"analysis","codes":["600519"],"strategy":null}
-
-User: "帮我分析茅台"
-{"intent":"analysis","codes":[],"strategy":null}
-
-User: "analyze TSLA and NVDA using trend strategy"
-{"intent":"analysis","codes":["TSLA","NVDA"],"strategy":"trend"}
 """
 
     # Cheap pre-filter: only invoke LLM when the message plausibly contains

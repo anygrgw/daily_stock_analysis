@@ -1547,7 +1547,8 @@ _FIELD_DEFINITIONS: Dict[str, Dict[str, Any]] = {
     },
     "ANTHROPIC_MAX_TOKENS": {
         "title": "Anthropic Max Tokens",
-        "description": "Anthropic API 响应最大 token 数（默认 8192）。",
+        "description": "Anthropic API 响应最大 token 数（默认 8192，仅用于直连 ANTHROPIC_MODEL 的兼容路径；"
+        "如需更高上限请改用 LITELLM_MODEL 入口。上限数值需按当前目标模型官方文档确认，此处为占位提案，未经核实）。",
         "category": "ai_model",
         "data_type": "number",
         "ui_control": "number",
